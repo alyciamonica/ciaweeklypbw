@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Berita;
 
@@ -32,3 +33,7 @@ Route::get('/berita', [BeritaController::class, 'tampilberita']);
 
 ///routing untuk handling 1 berita
 Route::get('berita/{slug}', [BeritaController::class, 'tampilberitatunggal']);
+
+
+Route::get('/datamahasiswa', [MahasiswaController::class, 'index']);
+    
